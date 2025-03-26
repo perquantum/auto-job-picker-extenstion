@@ -1,0 +1,23 @@
+{
+    "manifest_version": 3,
+    "name": "Auto Job Picker Extension",
+    "version": "1.0",
+    "permissions": ["scripting", "tabs", "storage"],
+    "host_permissions": ["*://hiring.amazon.ca/*"],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": ["*://hiring.amazon.ca/*"],
+            "js": ["content.js"],
+            "run_at": "document_idle"
+        }
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": ["keywords.txt"],
+            "matches": ["*://hiring.amazon.ca/*"]
+        }
+    ]
+}
