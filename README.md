@@ -14,3 +14,7 @@
 
 3. **You're Ready!**  
    - The extension is now installed and running.
+
+4. **Keywords**
+   - There is a keywords text file. You can keep updating the keywords using which you want to find the job titles.
+   - Use new line for new keyword.
